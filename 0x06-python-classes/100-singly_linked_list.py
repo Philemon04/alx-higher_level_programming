@@ -1,30 +1,39 @@
 #!/usr/bin/python3
+"""class Node: that defines a node of a singly linked list"""
+
+
 class Node:
-    def __init__(self, data, next_node = None):
+    """ Method to initialize the Node  object
+    """
+    def __init__(self, data, next_node=None):
         self.data = data
         self.next_node = next_node
 
     @property
     def data(self):
-        return(self.__data)
+        return self.__data
 
     @data.setter
     def data(self, value):
-        if type(data) is not int:
+        if not isinstance(value, int):
             raise TypeError("data must be an integer")
         self.__data = value
 
     @property
     def next_node(self):
-        return(self.__next_node)
+        return self.__next_node
 
     @next_node.setter
     def next_node(self, value):
-        if next_node is not None or type(next_node) is not Node:
+        if not isinstance(value, Node) and value is not None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
+"""class SinglyLinkedList: The class that defines a singly linked list"""
+
+
 class SinglyLinkedList:
+    """A method to initialize a private instatnce attribute"""
     def __init__(self):
         self.__head = None
 
@@ -45,9 +54,10 @@ class SinglyLinkedList:
             tmp.next_node = new
 
     def __str__(self):
+        """Define the print() representation of a SinglyLinkedList."""
         values = []
         tmp = self.__head
         while tmp is not None:
             values.append(str(tmp.data))
-            tmp = tmp.next.node
+            tmp = tmp.next_node
         return ('\n'.join(values))
