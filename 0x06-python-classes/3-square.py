@@ -2,7 +2,7 @@
 """ A class that defines a square by its size"""
 
 class Square:
-    """ Method to initialize the square object"""
+     """ Method to initialize the square object"""
      def __init__(self, size=0):
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -10,6 +10,7 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = int(size)
+            
     def area(self):
-         """ Method that returns the square area of the object"""
+        """ Method that returns the square area of the object"""
         return(self.__size * self.__size)
