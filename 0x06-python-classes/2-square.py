@@ -7,6 +7,7 @@ class Square:
         try:
             type(size) = int
         except TypeError:
+            """private variable instance size"""
             print("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
