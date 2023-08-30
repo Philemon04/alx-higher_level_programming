@@ -3,14 +3,13 @@
 
 class Square:
     """ Method to initialize the square object"""
-    def __init__(self, size=0):
-        try:
-            type(size) = int
-        except TypeError:
-            print("size must be an integer")
-        if size < 0:
+     def __init__(self, size=0):
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        elif size < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        else:
+            self.__size = int(size)
     def area(self):
          """ Method that returns the square area of the object"""
         return(self.__size * self.__size)
