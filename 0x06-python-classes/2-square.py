@@ -11,5 +11,6 @@ class Square:
         """private variable instance size"""
             print("size must be an integer")
         if size < 0:
+        """private variable instance size"""
             raise ValueError("size must be >= 0")
         self.__size = size
