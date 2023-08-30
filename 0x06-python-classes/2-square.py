@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 """Adding a variable to class Square: """
 class Square:
     """Initialize Square with size"""
