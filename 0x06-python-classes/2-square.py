@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-"""Further defining variable size: """
-
+"""Adding a variable to class Square: """
 class Square:
     """Initialize Square with size"""
     def __init__(self, size=0):
-        """Check if size is integer"""
+        """private variable instance size"""
         try:
             type(size) = int
         except TypeError:
