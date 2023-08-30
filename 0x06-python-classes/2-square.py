@@ -2,9 +2,9 @@
 """Further defining variable size: """
 
 class Square:
-    """Initialize Square with size = 0"""
+    """Initialize Square with size"""
     def __init__(self, size=0):
-        """Check if size is integer and is greater than 0"""
+        """Check if size is integer"""
         try:
             type(size) = int
         except TypeError:
