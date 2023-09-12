@@ -1,6 +1,7 @@
 Hello
 
 Another python project
+Python Inheritance
 
 What is a superclass, baseclass or parentclass
 What is a subclass
